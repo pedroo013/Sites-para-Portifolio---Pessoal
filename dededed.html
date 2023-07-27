@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body .ul {
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        a {
+            color: black;
+            text-decoration: none;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        
+        a:hover {
+            background: rgb(98, 164, 250);
+            border-radius: 5px;
+        }
+        
+        #logo {
+            font-size: 1.4rem;
+            font-weight: bold;
+        }
+        
+        #header {
+            box-sizing: border-box;
+            height: 50px;
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgb(73, 165, 241);
+        }
+        
+        #menu {
+            display: flex;
+            list-style: none;
+            gap: .5rem;
+        }
+        
+        #menu a {
+            display: block;
+            padding: .5rem;
+        }
+        
+        .button {
+            border: 5px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            border-radius: 5rem;
+        }
+        
+        button:hover {
+            background: rgb(98, 164, 250);
+            border-radius: 15px;
+        }
+        
+        .whats {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25d366;
+            color: #fff;
+            border-radius: 20px;
+            text-align: center;
+            font-size: 20px;
+            box-shadow: 1px 1px 2px;
+            z-index: 1000;
+        }
+        
+        main {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 85vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .slider {
+            margin: 0 auto;
+            width: 800px;
+            height: 400px;
+            overflow: hidden;
+        }
+        
+        .slides {
+            width: 400%;
+            height: 400px;
+            display: flex;
+        }
+        
+        .slides input {
+            display: none;
+        }
+        
+        .slide {
+            width: 25%;
+            position: relative;
+            transition: 0.7s;
+        }
+        
+        .slide img {
+            width: 800px;
+        }
+        
+        .manual-navigation {
+            position: absolute;
+            width: 800px;
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .manual-btn {
+            border: 2px solid #582f2f;
+            padding: 5px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 1s;
+        }
+        
+        .manual-btn:not(:last-child) {
+            margin-right: 40px;
+        }
+        
+        .manual-btn:hover {
+            background-color: #fff;
+        }
+        
+        #radio1:checked~.first {
+            margin-left: 0;
+        }
+        
+        #radio2:checked~.first {
+            margin-left: -25%;
+        }
+        
+        #radio3:checked~.first {
+            margin-left: -50%;
+        }
+        
+        #radio4:checked~.first {
+            margin-left: -75%;
+        }
+        
+        .navigation-auto {
+            position: absolute;
+            width: 800px;
+            margin-top: 360px;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .navigation-auto div:not(:last-child) {
+            margin-right: 40px;
+        }
+        
+        #radio1:checked~.navigation-auto .auto.btn1 {
+            background-color: black;
+        }
+        
+        #radio2:checked~.navigation-auto .auto.btn {
+            background-color: black;
+        }
+        
+        #radio3:checked~.navigation-auto .auto.btn3 {
+            background-color: black;
+        }
+        
+        #radio4:checked~.navigation-auto .auto.btn4 {
+            background-color: black;
+        }
+        
+        #info {
+            width: 250px;
+            height: 100px;
+            border: 1px solid black;
+            position: absolute;
+            top: 650px;
+            left: 550px;
+            background-color: aqua;
+            border-radius: 4px;
+        }
+    </style>
+    <title>Alpha Car</title>
+</head>
+
+<body>
+    <div class="whats">
+        <a href="https://web.whatsapp.com/send?phone=5543998310897"><img src="whats.png" alt="whats"></a>
+    </div>
+    <header id="header">
+        <p id="logo">ALPHA CAR
+            <p>
+                <nav id="nav">
+                    <ul id="menu">
+                        <li><a href="inicial.html">HOME</a></li>
+                        <li><a href="v">VEÍCULOS</a></li>
+                        <button class="button"><li><a href="*">ENTRAR</a></li></button>
+                    </ul>
+                </nav>
+    </header>
+    <br>
+    <hr style="height:10px; border:none; color:rgb(73, 165, 241); background-color:rgb(73, 165, 241); margin-top: 0px; margin-bottom: 0px;" />
+    <main>
+        <div class=" slider">
+            <div class="slides">
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+                <input type="radio" name="radio-btn" id="radio4">
+
+                <div class="slide first">
+                    <img src="blog-1-1500x600.png" alt="img1">
+                </div>
+                <div class="slide">
+                    <img src="CARROS-USADOS.jpg" alt="img2">
+                </div>
+                <div class="slide">
+                    <img src="Chevelle-1971-Vermelho-3-500x500.jpg" alt="img3">
+                </div>
+                <div class="slide">
+                    <img src="comprar-desk.jpeg_733c2ba162.jpeg" alt="img4">
+                </div>
+
+                <div class="navigation-auto">
+                    <div class="auto-btn1"></div>
+                    <div class="auto-btn2"></div>
+                    <div class="auto-btn3"></div>
+                    <div class="auto-btn4"></div>
+                </div>
+
+                <div id="info">
+                    <!--amorr aq é onde eu coloqueio o quadrado ai voce deixa do jeito q vc quiser, colocando oq precisar, te amo-->
+                </div>
+
+            </div>
+            <div class="manual-navigation">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+                <label for="radio4" class="manual-btn"></label>
+            </div>
+        </div>
+    </main>
+    <script>
+        let count = 1;
+        document.getElementById("radio1").checked = true;
+
+        setInterval(function() {
+            nextImage();
+        }, 4000)
+
+        function nextImage() {
+            count++;
+            if (count > 4) {
+                count = 1;
+            }
+
+            document.getElementById("radio" + count).checked = true
+
+        }
+        if (count == 1) {
+            info.innerText = "1"
+        } else if (count == 2) {
+            info.innerText = "2"
+        }
+        if (count == 3) {
+            info.innerText = "3"
+        } else if (count == 4) {
+            info.innerText = "4"
+        }
+    </script>
+</body>
+
+</html>

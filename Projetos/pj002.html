@@ -1,0 +1,43 @@
+<!DOCTYPE <!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+    <h1>Salario</h1>
+    <input type="text" id="name">
+    <input type="number" id="salario">
+    <input type="text" id="moeda">
+    <input type="button" value="Calcular" id="iniciar" onclick="calcular()">
+    <div id="res">Resultado</div>
+    <script>
+        function calcular() {
+            var nm = document.getElementById('name').value;
+            var slr = document.getElementById('salario').value;
+            var md = document.getElementById('moeda').value;
+            var res = document.getElementById('res');
+            if (md == 'Real') {
+                res.innerText = `${nm}, seu salário em reais é de R$${slr}.`;
+            } else if (md == 'Dolar') {
+                slr = slr / 5;
+                res.innerText = `${nm}, seu salário em dólares é de $${slr}.`;
+            } else if (md == 'Euro') {
+                slr = slr / 5.41;
+                res.innerText = `${nm}, seu salário em euros é de €${slr}.`;
+            } else {
+                res.innerText = `${nm}, você digitou a moeda de uma forma errada, digite: Real, Dolar ou Euro.`
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font: normal 20pt white arial;
+            background-color: rgb(141, 178, 141);
+        }
+        
+        h1 {
+            font: normal 25pt arial;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 align="center">SALARIO</h1>
+    <script>
+        var nome = window.prompt('Digite seu nome: ');
+        var idade = Number.parseInt(window.prompt('Digite sua idade: '));
+        var salario = Number(window.prompt('Informe seu salario: '));
+        document.write(`${nome} tem ${idade} anos e recebe ${salario.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}`)
+            // este comando transforma o numero digitado na variavel na moeda do pais selecionado
+    </script>
+</body>
+
+</html>

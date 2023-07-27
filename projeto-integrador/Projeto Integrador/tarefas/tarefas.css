@@ -1,0 +1,238 @@
+html,
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #FFFFF0;
+    width: 1000px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.lateral {
+    position: fixed;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    width: 160px;
+    background: linear-gradient(#1BFFFF, #2E3192);
+    transition: .3s;
+    top: 0;
+}
+
+.arrow {
+    padding: 0 12px;
+    transition: .3s;
+    justify-content: flex-end;
+}
+
+.menu {
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+}
+
+.menu-btn {
+    height: 60px;
+    border-bottom: .5px #000;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.menu-btn:hover {
+    padding-left: 5px;
+    background: #4169E1;
+    transition: .3s;
+}
+
+.arrow:hover {
+    padding-left: 5px;
+    background: #4169E1;
+    transition: .3s;
+}
+
+.icon,
+.arrow,
+.baixo {
+    flex: 1;
+    max-width: 60px;
+    min-width: 60px;
+}
+
+.txt {
+    flex: 5;
+    padding-left: 7px;
+}
+
+.oculto {
+    width: 60px;
+}
+
+.oculto .txt {
+    display: none;
+}
+
+.oculto .arrow {
+    transform: rotate(180deg);
+}
+
+.baixo {
+    position: fixed;
+    bottom: 30px;
+}
+
+.cabecalio {
+    position: absolute;
+    left: 110px;
+    top: 20px;
+}
+
+.frase {
+    font-size: 30px;
+    position: relative;
+    color: #000;
+    box-sizing: border-box;
+    border-bottom: 1px solid gray;
+    width: 1678px;
+    top: 55px;
+    left: 5px;
+}
+
+.titulo {
+    position: absolute;
+    text-align: center;
+    font-size: 50px;
+    color: #87CEFA;
+    margin: 0 auto;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.cardbox {
+    position: relative;
+    left: 50%;
+    top: 150px;
+    float: left;
+    font-size: 1.2em;
+    margin-right: 200px;
+    margin-bottom: 30px;
+    perspective: 800px;
+    transition: all 0.3s ease 0s;
+    width: 23.7%;
+}
+
+.cardbox:hover .card {
+    transform: rotateY(180deg);
+}
+
+.card {
+    background: linear-gradient(#2E3192, #1BFFFF);
+    cursor: default;
+    height: 400px;
+    transform-style: preserve-3d;
+    transition: transform 0.8s ease 0s;
+    width: 400px;
+    -webkit-animation: giro 1s 1;
+    animation: giro 1s 1;
+    padding-right: 90px;
+}
+
+.card .p {
+    margin-bottom: 1.8em;
+}
+
+.card .front,
+.card .back {
+    backface-visibility: hidden;
+    box-sizing: 100%;
+    color: white;
+    display: block;
+    font-size: 1.2em;
+    height: 100%;
+    padding: 0.8em;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+
+.card .front .strong {
+    background: #fff;
+    border-radius: 100%;
+    color: #222;
+    font-size: 1.5em;
+    line-height: 30px;
+    padding: 0 7px 4px 6px;
+}
+
+.card .back {
+    transform: rotateY(180deg);
+}
+
+.card .back .link {
+    padding: 0.3em 0.5em;
+    background: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 1px;
+    font-size: 0.9em;
+    transition: all 0.2s ease 0s;
+}
+
+.card .back .link:hover {
+    background: #fff;
+    color: #333;
+    text-shadow: 0 0 1px #333;
+}
+
+.cardbox:nth-child(1) .card .back {
+    background: #4169E1;
+}
+
+.cardbox:nth-child(2) .card .back {
+    background: #4169E1;
+}
+
+.cardbox:nth-child(3) .card .back {
+    background: #4169E1;
+}
+
+.cardbox:nth-child(4) .card .back {
+    background: #4169E1;
+}
+
+.cardbox:nth-child(2) .card {
+    -webkit-animation: giro 1.5s 1;
+    animation: giro 1.5s 1;
+}
+
+.cardbox:nth-child(3) .card {
+    -webkit-animation: giro 2s 1;
+    animation: giro 2s 1;
+}
+
+.cardbox:nth-child(4) .card {
+    -webkit-animation: giro 2.5s 1;
+    animation: giro 2.5s 1;
+}
+
+@-webkit-keyframes giro {
+    from {
+        transform: rotateY(180deg);
+    }
+    to {
+        transform: rotateY(0deg);
+    }
+}
+
+@keyframes giro {
+    from {
+        transform: rotateY(180deg);
+    }
+    to {
+        transform: rotateY(0deg);
+    }
+}

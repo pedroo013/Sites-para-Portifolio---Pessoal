@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="carro.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chivo+Mono&family=Ubuntu&display=swap" rel="stylesheet">
+    <title>(Nome do Carro) - Informações</title>
+</head>
+
+<body>
+    <header class="top">
+        <a class="link-logo" href="pagina-carros.html"><img src="Wheels-Nation Logo.png" class="logo" alt="Logo da empresa" width="20%"></a>
+        <div class="links">
+            <a href="#">Carros</a>
+            <a href="#">Cadastro</a>
+            <a href="#">Localização</a>
+        </div>
+    </header>
+    <div class="car">
+        <h2><strong><u>Nome carro</u></strong></h2>
+        <div class="imgs-car">
+            <div class="items">
+                <div class="select-image">
+                    <img id="principal" src="skyline 500x500.jpg" alt="Imagem selecionada">
+                </div>
+                <div class="images">
+                    <div class="thumbnails">
+                        <div class="thumbnail">
+                            <img src="Chevelle-1971-Vermelho-3-500x500.jpg" id="thumb1" onclick="img1click()">
+                        </div>
+                        <div class="thumbnail">
+                            <img src="carro 500x500.jpg" id="thumb2" onclick="img2click()">
+                        </div>
+                        <div class="thumbnail">
+                            <img src="carro antigo 500x500.jpg" id="thumb3" onclick="img3click()">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr width="100%" align="center">
+        <div class="info-car">
+            <h3>Informações</h3>
+            <ul class="info">
+                <li class="detail">
+                    <h5>Ano:</h5>
+                    <h4>2018</h4>
+                </li>
+                <li class="detail">
+                    <h5>Cambio:</h5>
+                    <h4>Automatico</h4>
+                </li>
+                <li class="detail">
+                    <h5>Combustivel:</h5>
+                    <h4>Gasolina</h4>
+                </li>
+                <br>
+                <li class="detail">
+                    <h5>Cor:</h5>
+                    <h4>Cinza</h4>
+                </li>
+                <li class="detail">
+                    <h5>KM:</h5>
+                    <h4>14.000</h4>
+                </li>
+                <li class="detail">
+                    <h5>Aceita Troca:</h5>
+                    <h4>Não</h4>
+                </li>
+            </ul>
+            <div class="bt-agendar"><button class="agendar">Agendar Horario</button></div>
+        </div>
+    </div>
+    <hr class="final">
+    <script src="carro.js"></script>
+</body>
+
+</html>
